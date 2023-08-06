@@ -36,6 +36,8 @@ function Snack() {
   }
 
   function handleNextButton(id) {
+    if (!singleSnack) {
+    }
     id++;
     navigate(`/snacks/${id}`);
   }
@@ -44,37 +46,46 @@ function Snack() {
     return year;
   }
   return (
-    <div className="Snack">
-      <h2>Snack</h2>
+    <div className="SnackContainer">
+      <h2 className="snackH2">Snack</h2>
       {singleSnack && (
-        <div className="snackButtons">
-          <button onClick={() => navigate(`/snacks/${id - 1}`)}>
-            Previous
-          </button>
-          <button onClick={() => handleNextButton(id)}>Next</button>
+        <div className="snack">
+          <div className="snackButtons">
+            <button onClick={() => navigate(`/snacks/${id - 1}`)}>
+              Previous
+            </button>
+            <button onClick={() => navigate("/snacks")}>All Snacks</button>
+            <button onClick={() => handleNextButton(id)}>Next</button>
+          </div>
           <div className="snackDiv">
-          <div className="snackImage">
-            <img src={singleSnack.url} alt={singleSnack.name} />
+            <div className="snackImage">
+              <img
+                src={singleSnack.url}
+                alt={singleSnack.name}
+                height="300px"
+              />
             </div>
-          <div className="snackInfo">
-          <p>Name</p> <span>{singleSnack.name}</span>
-          <br />
-          <p>Release Year</p> <span>{getYearOfRelease()}</span>
-          <br />
-          <p>Type</p> <span>{singleSnack.type}</span>
-          <br />
-          <p>Rating</p> <span>{singleSnack.rating}</span>
-          <br />
-          <p>Favorite</p> <span>{singleSnack.is_favorite ? "💜" : "❌"}</span>
-          <br />
-          <br /></div></div>
-          <button onClick={() => navigate("/snacks")}>
-            Back To All Snacks
-          </button>
-          <Link to={`/snacks/${id}/edit`}>
-            <button>Edit</button>
-          </Link>
-          <button onClick={() => deleteSnack()}>Delete</button>
+            <div className="snackInfo">
+              <p>Name</p> <span>{singleSnack.name}</span>
+              <br />
+              <p>Release Year</p> <span>{getYearOfRelease()}</span>
+              <br />
+              <p>Type</p> <span>{singleSnack.type}</span>
+              <br />
+              <p>Rating</p> <span>{singleSnack.rating}</span>
+              <br />
+              <p>Favorite</p>{" "}
+              <span>{singleSnack.is_favorite ? "💜" : "❌"}</span>
+              <br />
+              <br />
+            </div>
+          </div>
+          <div className="snackButtonsLast">
+            <Link to={`/snacks/${id}/edit`}>
+              <button>Edit</button>
+            </Link>
+            <button onClick={() => deleteSnack()}>Delete</button>
+          </div>
         </div>
       )}
     </div>
