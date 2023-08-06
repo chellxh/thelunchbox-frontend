@@ -1,0 +1,159 @@
+.SnackContainer {
+  background-color: rgb(98, 255, 195);
+  display: grid;
+  font-weight: bold;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-column-gap: 2px;
+  grid-row-gap: 10px;
+  padding: 50px;
+  margin: 25px;
+}
+
+.snackH2 {
+  border: 4px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(144, 243, 156);
+}
+.snack {
+  border: 1px solid black;
+}
+
+/* BUTTON CSS */
+.snackButtons {
+  padding: 10px;
+  background-color: rgb(102, 215, 240);
+}
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: rgb(183, 237, 241);
+  color: black;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+}
+button:hover {
+  background: #0053ba;
+}
+
+/* button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+} */
+
+button:active {
+  transform: scale(0.99);
+}
+
+.snackDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content;
+  /* border: 1px solid black; */
+}
+.snackImage {
+  background-color: rgb(81, 9, 213);
+  align-self: center;
+  height: 89%;
+  padding: 20px;
+  margin: 0;
+}
+.snackInfo {
+  background-color: #6f30b2;
+}
+
+.snackInfo span {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #6f070a 0%,
+    #ff1361 29%,
+    orange 64%,
+    #fff800 99%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* font-size: 190px; */
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.snackButtonsLast {
+  padding: 10px;
+  background-color: rgb(102, 215, 240);
+}
+
+/* SMALLER SCRREENS */
+@media only screen and (max-width: 600px) {
+  .SnackContainer {
+    background-color: rgb(81, 9, 213);
+    display: block;
+    font-weight: bold;
+  }
+  .snackH2 {
+    background-color: #6f30b2;
+    border: none;
+    margin: auto;
+  }
+
+  .snack {
+    border: none;
+  }
+
+  .snackButtons {
+    padding: 5px;
+  }
+  button {
+    font-size: smaller;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(144, 243, 156);
+  }
+
+  button:hover {
+    background: #6aa487;
+  }
+
+  button:active {
+    transform: scale(0.99);
+  }
+
+  .snackDiv {
+    display: inline-block;
+    background-color: transparent;
+  }
+  .snackImage {
+    background-color: transparent;
+    display: inherit;
+    margin: auto;
+    align-self: center;
+    padding-top: 10px;
+  }
+  img {
+    height: 200px;
+  }
+  .snackInfo {
+    display: inherit;
+    padding: 10px 50px;
+  }
+}
