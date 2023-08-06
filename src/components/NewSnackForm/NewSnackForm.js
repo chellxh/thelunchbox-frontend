@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -131,6 +132,5 @@ function NewSnackForm() {
       </div>
     </div>
   );
-}
 
 export default NewSnackForm;
