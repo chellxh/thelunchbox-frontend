@@ -34,9 +34,15 @@ function Snacks() {
                 <th>Favorite</th>
               </tr>
               {snacks.map((snack) => {
+
+                const releaseDate = new Date(snack.released_date);
+
+                const formattedDate = releaseDate.toLocaleDateString();
+                
                 return (
                   <tr key={snack.id}>
-                    <td>{snack.released_date}</td>
+                    <td>{formattedDate}</td>
+
                     <td id="snacks-name">
                       <Link to={`/snacks/${snack.id}`}>{snack.name}</Link>
                     </td>
