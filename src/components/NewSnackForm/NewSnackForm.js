@@ -1,7 +1,6 @@
-
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./NewSnackForm.css";
 
 function NewSnackForm() {
@@ -14,6 +13,7 @@ function NewSnackForm() {
     is_favorite: false,
   });
   const navigate = useNavigate();
+  const { id } = useParams();
   let api = process.env.REACT_APP_API_URL;
 
   function handleCheckBoxChange(event) {
@@ -30,10 +30,10 @@ function NewSnackForm() {
 
     try {
       let result = await axios.post(`${api}/snacks`, snack);
-      console.log(result.data);
+      // console.log(result.data);
 
       alert("Snack is added!");
-      navigate("/snacks");
+      navigate(`/snacks`);
     } catch (error) {
       console.log(error);
     }
@@ -59,8 +59,8 @@ function NewSnackForm() {
           </div>
 
           <div className="snack-new-input">
-            <label htmlFor="url">
-              <span style={{ fontWeight: "bold" }}>Url</span>
+            <label htmlFor="Image">
+              <span style={{ fontWeight: "bold" }}>Image</span>
             </label>
             <input
               type="text"
@@ -128,9 +128,9 @@ function NewSnackForm() {
 
           <button type="submit">Submit</button>
         </form>
-        
       </div>
     </div>
   );
+}
 
 export default NewSnackForm;
