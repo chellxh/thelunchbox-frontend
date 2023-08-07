@@ -30,10 +30,11 @@ function NewSnackForm() {
 
     try {
       let result = await axios.post(`${api}/snacks`, snack);
-      // console.log(result.data);
+
 
       alert("Snack is added!");
-      navigate(`/snacks`);
+      navigate(`/snacks/${result.data.id}`);
+
     } catch (error) {
       console.log(error);
     }
