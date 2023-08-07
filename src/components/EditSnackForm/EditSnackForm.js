@@ -1,7 +1,10 @@
-import React from "react";
+
+import React from 'react'
 
 function EditSnackForm() {
-  return <div>EditSnackForm</div>;
+  return (
+    <div>EditSnackForm</div>
+  )
 }
 
-export default EditSnackForm;
+export default EditSnackForm
