@@ -17,7 +17,7 @@ function Snack() {
   async function fetchSnackById() {
     try {
       let result = await axios.get(`${BASE_URL}/snacks/${id}`);
-      // console.log(result);
+
       setSingleSnack(result.data);
     } catch (e) {
       console.log(e);
@@ -25,13 +25,19 @@ function Snack() {
   }
 
   async function deleteSnack() {
-    try {
-      let result = await axios.delete(`${BASE_URL}/snacks/${id}`);
-      const { name } = result.data;
-      alert(`${name} Has Been Deleted!`);
-      navigate("/snacks");
-    } catch (e) {
-      console.log(e);
+    const confirmation = window.confirm(
+      "Are you sure you want to delete this snack?"
+    );
+
+    if (confirmation) {
+      try {
+        let result = await axios.delete(`${BASE_URL}/snacks/${id}`);
+        const { name } = result.data;
+        alert(`${name} Has Been Deleted!`);
+        navigate("/snacks");
+      } catch (e) {
+        console.log(e);
+      }
     }
   }
 
