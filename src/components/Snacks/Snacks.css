@@ -1,0 +1,44 @@
+.snacks-container-index {
+  text-align: left;
+  margin: 20px;
+}
+
+.snacks-container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: xx-large;
+}
+
+.snacks-container-table {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#snacks {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  justify-self: center;
+}
+
+#snacks td,
+#snacks th {
+  padding: 10px;
+  font-size: 20px;
+  max-width: max-content;
+  border-bottom: 1px solid #da723c;
+}
+
+#snacks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #da723c;
+  color: white;
+}
+
+#snacks-name a {
+  text-decoration: none;
+}
