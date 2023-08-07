@@ -1,0 +1,7 @@
+.Home {
+  background-image: url("https://cdn.dribbble.com/users/3066514/screenshots/10175120/media/a53234a1586e22bd39eaaec4ffd11df5.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat, repeat;
+  padding: 20px;
+}
