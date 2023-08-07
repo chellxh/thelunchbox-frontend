@@ -1,18 +1,27 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div>
-      Lunchbox
+    <div className="nav bg-warning">
       <p>
-        <Link to="/snacks">All Snaks and Dinks</Link>
+        <Link className="nav-link ext-black" to="/">
+          Home
+        </Link>
+      </p>
+
+      <p>
+        <Link className="nav-link ext-black" to="/snacks">
+          All Snaks & Dinks
+        </Link>
       </p>
       <p>
-        <Link to="/snacks/new">Add Favorite Snack To The Lunchbox</Link>
+        <Link className="nav-link ext-black" to="/snacks/new">
+          Add Favorites To The Lunchbox
+        </Link>
       </p>
     </div>
   );
 }
 
-export default NavBar
+export default NavBar;
