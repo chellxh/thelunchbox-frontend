@@ -11,7 +11,7 @@ function NavBar() {
 
       <p>
         <Link className="nav-link ext-black" to="/snacks">
-          All Snacks & Dinks
+          All Snacks & Drinks
         </Link>
       </p>
       <p>
