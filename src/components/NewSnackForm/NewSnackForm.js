@@ -130,5 +130,8 @@ function NewSnackForm() {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> harleyxhomexcss
 export default NewSnackForm;
