@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./NewSnackForm.css";
 
 function NewSnackForm() {
@@ -13,7 +13,6 @@ function NewSnackForm() {
     is_favorite: false,
   });
   const navigate = useNavigate();
-  const { id } = useParams();
   let api = process.env.REACT_APP_API_URL;
 
   function handleCheckBoxChange(event) {
