@@ -131,7 +131,11 @@ function NewSnackForm() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> harleyxhomexcss
+=======
+
+>>>>>>> 7d14901e0017b8dd276cb63230310d4008545268
 export default NewSnackForm;
