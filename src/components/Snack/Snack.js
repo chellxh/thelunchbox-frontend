@@ -17,7 +17,7 @@ function Snack() {
   async function fetchSnackById() {
     try {
       let result = await axios.get(`${BASE_URL}/snacks/${id}`);
-      
+
       setSingleSnack(result.data);
     } catch (e) {
       console.log(e);
