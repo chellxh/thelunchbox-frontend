@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -128,9 +127,8 @@ function NewSnackForm() {
 
           <button type="submit">Submit</button>
         </form>
-        
       </div>
     </div>
   );
-
+}
 export default NewSnackForm;
