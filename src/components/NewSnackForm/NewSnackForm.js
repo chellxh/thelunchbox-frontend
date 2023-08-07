@@ -29,10 +29,9 @@ function NewSnackForm() {
 
     try {
       let result = await axios.post(`${api}/snacks`, snack);
-      console.log(result.data);
 
       alert("Snack is added!");
-      navigate("/snacks");
+      navigate(`/snacks/${result.data.id}`);
     } catch (error) {
       console.log(error);
     }
@@ -58,8 +57,8 @@ function NewSnackForm() {
           </div>
 
           <div className="snack-new-input">
-            <label htmlFor="url">
-              <span style={{ fontWeight: "bold" }}>Url</span>
+            <label htmlFor="Image">
+              <span style={{ fontWeight: "bold" }}>Image</span>
             </label>
             <input
               type="text"
@@ -131,4 +130,5 @@ function NewSnackForm() {
     </div>
   );
 }
+
 export default NewSnackForm;
