@@ -9,7 +9,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat, repeat;
-
   padding: 20px;
 }
 
@@ -19,7 +18,7 @@
   justify-content: center;
   text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
     9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
-  font-family: bungee;
+  font-family: "borel";
   font-weight: bolder;
   text-transform: uppercase;
   font-size: 20px;
@@ -91,4 +90,9 @@
   100% {
     transform: translate(0px, 0px);
   }
+}
+.about {
+  color: #6b24b7;
+  font-family: "borel", cursive;
+  margin-top: 10px;
 }
