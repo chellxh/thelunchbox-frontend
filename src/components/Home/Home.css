@@ -1,6 +1,7 @@
 .homeDiv {
   background-color: #b298dc;
   padding: 20px;
+  max-height: fit-content;
 }
 
 .Home {
@@ -8,7 +9,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat, repeat;
-
   padding: 20px;
 }
 
@@ -18,13 +18,13 @@
   justify-content: center;
   text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
     9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
-  font-family: bungee;
-  font-weight: 800px;
+  font-family: "borel";
+  font-weight: bolder;
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
   margin: 0;
-  color: pink;
+  color: #6f2dbd;
   animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
   letter-spacing: 0.4rem;
 }
@@ -34,13 +34,13 @@
     text-shadow: none;
   }
   10% {
-    text-shadow: 3px 3px 0 pink;
+    text-shadow: 3px 3px 0 rgb(138, 11, 174);
   }
   20% {
-    text-shadow: 3px 3px 0 hotpink, 6px 6px 0 violet;
+    text-shadow: 3px 3px 0 #665687, 6px 6px 0 violet;
   }
   30% {
-    text-shadow: 3px 3px 0 magenta, 6px 6px 0 mediumvioletred,
+    text-shadow: 3px 3px 0 rgb(208, 37, 31), 6px 6px 0 #a663cc,
       9px 9px var(--color-quaternary);
   }
   40% {
@@ -90,4 +90,9 @@
   100% {
     transform: translate(0px, 0px);
   }
+}
+.about {
+  color: #6b24b7;
+  font-family: "borel", cursive;
+  margin-top: 10px;
 }
