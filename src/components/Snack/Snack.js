@@ -9,6 +9,7 @@ function Snack() {
 
   let { id } = useParams();
   const navigate = useNavigate();
+  const [currentId, setCurrentId] = useState(id);
 
   useEffect(() => {
     fetchSnackById();
@@ -19,6 +20,7 @@ function Snack() {
       let result = await axios.get(`${BASE_URL}/snacks/${id}`);
 
       setSingleSnack(result.data);
+      setCurrentId(result.data.id);
     } catch (e) {
       console.log(e);
     }
@@ -42,15 +44,26 @@ function Snack() {
   }
 
   function handleNextButton(id) {
-    if (!singleSnack) {
+    try {
+      let nextId = id++;
+
+      if (nextId === singleSnack.id) {
+        navigate(`/snacks/${id}`);
+        setCurrentId(nextId);
+      } else if (nextId !== singleSnack.id) {
+        setCurrentId(nextId - 1);
+        navigate(`/snacks/${currentId}`);
+      }
+    } catch (e) {
+      alert("No snack next");
     }
-    id++;
-    navigate(`/snacks/${id}`);
   }
+
   function getYearOfRelease() {
     let year = singleSnack.released_date.slice(0, 4);
     return year;
   }
+
   return (
     <div className="SnackContainer">
       <h2 className="snackH2">Snack</h2>
@@ -73,15 +86,13 @@ function Snack() {
             </div>
             <div className="snackInfo">
               <p>Name</p> <span>{singleSnack.name}</span>
-              <br />
               <p>Release Year</p> <span>{getYearOfRelease()}</span>
-              <br />
               <p>Type</p> <span>{singleSnack.type}</span>
-              <br />
               <p>Rating</p> <span>{singleSnack.rating}</span>
-              <br />
-              <p>Favorite</p>{" "}
-              <span>{singleSnack.is_favorite ? "💜" : "❌"}</span>
+              <p>Favorite</p>
+              <span className="heart">
+                {singleSnack.is_favorite ? "💜" : "❌"}
+              </span>
               <br />
               <br />
             </div>
