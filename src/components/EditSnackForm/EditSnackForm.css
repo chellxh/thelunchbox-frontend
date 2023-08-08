@@ -1,0 +1,44 @@
+.snack-container-edit {
+    text-align: left;
+    margin: 20px;
+}
+
+.snack-container-edit-form {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: #68B984;
+    padding: 35px 35px;
+}
+
+.snack-edit-input {
+    padding: 5px;
+    margin: 5px 0px;
+}
+
+.snack-edit-input input {
+    width: 300px;
+    height: 30px;
+    font-size: large;
+}
+
+.snack-edit-input label {
+    display: inline-block;
+    margin: 5px;
+    font-size: large;
+}
+
+.snack-edit-checkbox input {
+    margin: 10px;
+}
+
+button {
+    margin: 20px;
+    font-size: large;
+}
+
+.edit-snack-body {
+    background-image: url('./snacks.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
