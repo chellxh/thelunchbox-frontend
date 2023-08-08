@@ -44,18 +44,12 @@ function Snack() {
   }
 
   function handleNextButton(id) {
-    try {
-      let nextId = id++;
-
-      if (nextId === singleSnack.id) {
-        navigate(`/snacks/${id}`);
-        setCurrentId(nextId);
-      } else if (nextId !== singleSnack.id) {
-        setCurrentId(nextId - 1);
-        navigate(`/snacks/${currentId}`);
-      }
-    } catch (e) {
-      alert("No snack next");
+    if (id++ === singleSnack.id) {
+      navigate(`/snacks/${id}`);
+      setCurrentId(id);
+    } else {
+      alert("No snacks left!");
+      navigate(`/snacks/1`);
     }
   }
 
