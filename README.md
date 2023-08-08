@@ -52,7 +52,7 @@ When you submit the new snack form, the new snack will be created in the databas
 
 ## Dependencies
 
-The Budgeting App Frontend relies on the following dependencies:
+The Snack App Frontend relies on the following dependencies:
 `React` - A JavaScript library for building user interfaces.
 
 `axios` -
