@@ -108,5 +108,4 @@ function Snack() {
     </div>
   );
 }
-
 export default Snack;
