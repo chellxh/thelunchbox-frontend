@@ -64,5 +64,6 @@ A promise-based HTTP client for making API requests.
 `react-router-dom` - A routing library for React applications.
 
 ### Links
-Backend [GitHub](https://github.com/angels178/lunchbox-backend)
-Frontend [DeployedSite](https://the-lunchbox.netlify.app/)
+
+- Backend [GitHub](https://github.com/angels178/lunchbox-backend)
+- Frontend [DeployedSite](https://the-lunchbox.netlify.app/)
