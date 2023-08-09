@@ -2,7 +2,10 @@
 
 A new app for snack recommendations. You can view yummy snacks, edit existing snacks, create new snacks. Welcome to <strong>The LunchBox</strong>.
 
-Team: Ambarimar Ulloa, Angel Wu, Michelle Harley
+### Team
+
+- Ambarimar Ulloa [GitHub](https://github.com/AmbarimarU)
+- Angel Wu [GitHub](https://github.com/angels178)
 
 ## Instructions on Installing This Project
 

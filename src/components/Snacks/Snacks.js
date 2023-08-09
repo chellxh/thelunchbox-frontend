@@ -2,14 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Snacks.css";
+import API from "../common/Api/Api";
 
 function Snacks() {
   const [snacks, setSnacks] = useState([]);
-  let url = process.env.REACT_APP_API_URL;
 
   async function fetchSnacksData() {
     try {
-      let result = await axios.get(`${url}/snacks`);
+      let result = await axios.get(`${API}`);
 
       setSnacks(result.data);
     } catch (error) {
