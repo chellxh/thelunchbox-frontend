@@ -1,6 +1,8 @@
 .SnackContainer {
-  background-color: rgb(98, 255, 195);
+  background-color: #c7edc6;
   display: grid;
+  color: #28044d;
+  font-family: "borel", cursive;
   font-weight: bold;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
@@ -11,19 +13,21 @@
 }
 
 .snackH2 {
-  border: 4px solid black;
+  border: 4px solid rgb(214, 113, 232);
+
   padding: 10px;
-  margin: 10px;
-  background-color: rgb(144, 243, 156);
+  margin: 10px 0;
+  margin-top: 15px;
+  background-color: #a663cc;
 }
 .snack {
-  border: 1px solid black;
+  border: 1px solid #9cc69b;
 }
 
 /* BUTTON CSS */
 .snackButtons {
   padding: 10px;
-  background-color: rgb(102, 215, 240);
+  background-color: #a663cc;
 }
 button {
   display: inline-block;
@@ -31,8 +35,8 @@ button {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  background: rgb(183, 237, 241);
-  color: black;
+  background: rgb(156, 233, 238);
+  color: rgb(55, 8, 57);
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1;
@@ -40,13 +44,8 @@ button {
   text-align: center;
 }
 button:hover {
-  background: #0053ba;
+  background: #9cc69b;
 }
-
-/* button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
-} */
 
 button:active {
   transform: scale(0.99);
@@ -59,11 +58,16 @@ button:active {
   /* border: 1px solid black; */
 }
 .snackImage {
-  background-color: rgb(81, 9, 213);
+  background-color: #b298dc;
   align-self: center;
-  height: 89%;
-  padding: 20px;
+  height: 100%;
+  padding: 0;
   margin: 0;
+}
+
+img {
+  padding-top: 50px;
+  align-content: center;
 }
 .snackInfo {
   background-color: #6f30b2;
@@ -73,10 +77,10 @@ button:active {
   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #6f070a 0%,
-    #ff1361 29%,
-    orange 64%,
-    #fff800 99%
+    #ef73f8 0%,
+    #c797fd 29%,
+    #ebd2f9 64%,
+    #b298dc 99%
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -98,17 +102,14 @@ button:active {
   }
 }
 
-.snackButtonsLast {
-  padding: 10px;
-  background-color: rgb(102, 215, 240);
-}
-
 /* SMALLER SCRREENS */
 @media only screen and (max-width: 600px) {
   .SnackContainer {
-    background-color: rgb(81, 9, 213);
-    display: block;
+    background-color: rgb(225, 133, 216);
+    display: inline-block;
     font-weight: bold;
+    padding: 0;
+    max-width: fit-content;
   }
   .snackH2 {
     background-color: #6f30b2;
@@ -121,13 +122,17 @@ button:active {
   }
 
   .snackButtons {
-    padding: 5px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
+
   button {
-    font-size: smaller;
-    padding: 5px;
-    margin: 5px;
-    background-color: rgb(144, 243, 156);
+    font-size: xx-small;
+    padding: 6px;
+    /* margin: 5px; */
+    background-color: rgb(101, 236, 207);
   }
 
   button:hover {
@@ -140,20 +145,21 @@ button:active {
 
   .snackDiv {
     display: inline-block;
+    flex-direction: column;
     background-color: transparent;
   }
   .snackImage {
-    background-color: transparent;
-    display: inherit;
+    flex-direction: flex;
+    background-color: #b298dc;
     margin: auto;
     align-self: center;
-    padding-top: 10px;
   }
   img {
-    height: 200px;
+    height: 300px;
+    padding: 30px;
+    align-self: center;
   }
   .snackInfo {
-    display: inherit;
     padding: 10px 50px;
   }
 }

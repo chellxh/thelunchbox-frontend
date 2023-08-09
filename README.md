@@ -50,4 +50,14 @@ The new snack form is labeled and type inputs are properly set.
 
 When you submit the new snack form, the new snack will be created in the database and you will be brought to that snack's show page.
 
+## Dependencies
+
+The Snack App Frontend relies on the following dependencies:
+`React` - A JavaScript library for building user interfaces.
+
+`axios` -
+A promise-based HTTP client for making API requests.
+
+`react-router-dom` - A routing library for React applications.
+
 Backend [GitHub](https://github.com/angels178/lunchbox-backend)

@@ -3,20 +3,22 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div className="Home">
-      <h1>
-        Welcome To
-        <br />
-        The LunchBox
-      </h1>
-      <br />
-      <img
-        src="https://cdn.dribbble.com/users/692029/screenshots/5268418/media/1bfe66e050b08076691c2eefacfe4e01.gif"
-        alt="Snacks holding hands"
-      />
+    <div className="homeDiv">
+      <h1 className="welcome">Welcome To The LunchBox</h1>
+      <div className="Home">
+        <img
+          src="https://thumbs.gfycat.com/WeeImpeccableElephantseal.webp"
+          alt="Bento box of lunch"
+        />
+      </div>
+      <div className="about">
+        <p>
+          Where all snacks are munchie material. Don't see your favorite snack?
+          Add it to the lunchbox and let's get snackin'.
+        </p>
+      </div>
     </div>
   );
 }
 
 export default Home;
-

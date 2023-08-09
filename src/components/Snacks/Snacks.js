@@ -34,7 +34,7 @@ function Snacks() {
 
 
   return (
-    <div>
+    <div className="snacksDiv">
       <h1 className="snacks-container-index">Index</h1>
       <div className="snacks-container">
         <div className="snacks-container-table">
@@ -47,11 +47,10 @@ function Snacks() {
                 <th>Favorite</th>
               </tr>
               {snacks.map((snack) => {
-
                 const releaseDate = new Date(snack.released_date);
 
                 const formattedDate = releaseDate.toLocaleDateString();
-                
+
                 return (
                   <tr key={snack.id}>
                     <td>{formattedDate}</td>
