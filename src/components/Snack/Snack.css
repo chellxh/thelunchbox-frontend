@@ -102,11 +102,6 @@ img {
   }
 }
 
-.snackButtonsLast {
-  padding: 10px;
-  background-color: #a663cc;
-}
-
 /* SMALLER SCRREENS */
 @media only screen and (max-width: 600px) {
   .SnackContainer {
@@ -130,6 +125,7 @@ img {
     padding: 0;
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   button {
