@@ -1,63 +1,58 @@
-# The LunchBox App
+# Full Stack The Lunchbox App
 
-A new app for snack recommendations. You can view yummy snacks, edit existing snacks, create new snacks. Welcome to <strong>The LunchBox</strong>.
+### Description:
 
-Team: Ambarimar Ulloa, Angel Wu, Michelle Harley
+> This lunchbox app is an application where people can add their favorite snacks and drinks to their list. This project brings together various skills in JavaScript, web deployment, React, express, servers, psql, RESTful routes, bootstrap and CSS.
 
-## Instructions on Installing This Project
+---
+# Collaborations
 
-1. Fork and clone this repository.
+This project is collaborated with [Michelle Harley](https://github.com/chellxh) and [Ambarimar Ulloa](https://github.com/AmbarimarU)
 
-1. Navigate to the cloned repository's directory on your command line. Then, run the following command:
+You can enjoy the following key features:
 
-   ```
-   npm install
-   ```
+- User-Friendly Interface
 
-   This will install the libraries needed to run the tests.
+- Create and Manage Snacks & Drinks
 
-1. Open the repository in VSCode.
+- View and Edit Snacks & Drink
 
-   ```
-   code .
-   ```
+- Delete Snack or Drink
 
-## Features
+- Error Handling
 
-We built a React application that allows for CRUD operations to be performed on a single resource, SNACKS.
+- Styling based on Snack theme
 
-### Navigation Bar
+---
+## Getting Started
+> If you would like to play aroud with this App, feel free to:
+- Fork this repo
+- Clone the forked repository
+- `cd` to the directory where you cloned it
+- `npm install` to install dependencies
+- `npm start` to start the react app on `localhost:3000`
 
-The navigation bar will be present one every page where you will have the option to create a new snack.
+Using the [Lunchbox-backend](https://github.com/angels178/lunchbox-backend), you are going to be able to manipulate frontend-only App.
 
-### Snacks Index Page
+Don't forget to keep your back-end API running while using / manupulating this App.
 
-The Snacks Index page presents all of the resources in our database table.
-When a snack is clicked, you will be brought to the snacks Show page.
+---
 
-### Snack Show Page
+> To track the progress of the Snack App project, visit my Trello:
+> [here](https://trello.com/b/yIR7plR7/fullstack-snack-project)
 
-The snack Show Page includes more detailed information about the specific snack.
-You can also edit the existing snack's details on an Edit Form page.
-When done editing, you will get sent back to that snack's updated show page.
-You will also have the option to delete a snack which will ask you to confirm before deleting the snack and bringing you back to the Snacks Index page.
+---
 
-### New Snack Form
+## Repositories
 
-When the create new snack button in the navigation bar is clicked, you will be brought to a new page that includes a form to create a new snack.
+Frontend: [GitHub](https://github.com/chellxh/thelunchbox-frontend)
 
-The new snack form is labeled and type inputs are properly set.
+Backend: [GitHub](https://github.com/angels178/lunchbox-backend)
 
-When you submit the new snack form, the new snack will be created in the database and you will be brought to that snack's show page.
+---
 
-## Dependencies
+## Deployed Links
 
-The Snack App Frontend relies on the following dependencies:
-`React` - A JavaScript library for building user interfaces.
+Frontend: [here]()
 
-`axios` -
-A promise-based HTTP client for making API requests.
-
-`react-router-dom` - A routing library for React applications.
-
-Backend [GitHub](https://github.com/angels178/lunchbox-backend)
+Backend: [here]()
