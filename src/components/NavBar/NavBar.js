@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="nav bg-warning">
+    <div className="nav bg-warning bg-gradient">
       <p>
         <Link className="nav-link ext-black" to="/">
           Home

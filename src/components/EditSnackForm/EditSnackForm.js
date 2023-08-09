@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import "./EditSnackForm.css"
 
 function EditSnackForm() {
   let url = process.env.REACT_APP_API_URL;
@@ -20,8 +21,11 @@ function EditSnackForm() {
   //fetch snack data
   const getSnack = async () => {
     try {
+      const result = await axios.get(`${url}/snacks/${id}`);
 
-      const result =  await axios.get(`${url}/snacks/${id}`)
+      const date = new Date(result.data.released_date);
+      result.data.released_date = date.toISOString().split("T")[0];
+
       setSnack(result.data);
     } catch (error) {
       navigate("/404");
@@ -29,26 +33,25 @@ function EditSnackForm() {
   };
 
   useEffect(() => {
-   getSnack();
+    getSnack();
+  }, []);
 
-  },[]);
-  
-  //text handler 
+  //text handler
   function textChangeHandler(event) {
-    console.log(event.target.value)
-   setSnack({
-    ...snack, [event.target.id]: event.target.value
-    
-   })
-
-  };
-  //checkbox handler 
-  function checkBoxHandler(event) {
+    console.log(event.target.value);
     setSnack({
-      ...snack, is_favorite: !snack.is_favorite
+      ...snack,
+      [event.target.id]: event.target.value,
     });
   }
-//update snack = put
+  //checkbox handler
+  function checkBoxHandler(event) {
+    setSnack({
+      ...snack,
+      is_favorite: !snack.is_favorite,
+    });
+  }
+  //update snack = put
   // const updateSnack =  async (id) => {
   //   try {
   //     await axios.put(`${url}/snacks/${id}`, snack);
@@ -67,11 +70,11 @@ function EditSnackForm() {
     }
   }
 
-
   return (
     <div>
-      <h1 className="snack-container-edit">New</h1>
-      <div className="snack-container-form">
+      <h1 className="snack-container-edit">Edit</h1>
+      <div className="edit-snack-body">
+        <div className="snack-container-form">
         <form onSubmit={submitHandler}>
           <div className="snack-edit-input">
             <label htmlFor="name">
@@ -122,7 +125,7 @@ function EditSnackForm() {
               type="date"
               id="released_date"
               name="released_date"
-              value={snack.date}
+              value={snack.released_date}
               onChange={textChangeHandler}
             />
           </div>
@@ -158,6 +161,8 @@ function EditSnackForm() {
           <button type="submit">Submit</button>
         </form>
       </div>
+      </div>
+      
     </div>
   );
 }

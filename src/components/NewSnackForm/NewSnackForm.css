@@ -4,7 +4,7 @@
 }
 
 .snack-container-form {
-    max-width: 350px;
+    max-width: 450px;
     margin: 0 auto;
     background-color: #F47C7C;
     padding: 35px 35px;
@@ -15,7 +15,7 @@
     margin: 5px 0px;
 }
 
-.budget-new-input input {
+.snack-new-input input {
     width: 300px;
     height: 30px;
     font-size: large;
@@ -27,12 +27,25 @@
     font-size: large;
 }
 
+.snack-new-checkbox input {
+    margin: 10px;
+}
+
 button {
     margin: 20px;
     font-size: large;
+    color: palevioletred;
+    background-color: blanchedalmond;
 }
 
 button:hover {
-    background-color: #C37B89;
+    background-color: #FBA1A1;
     color: white;
+}
+
+.new-snack-body {
+    background-image: url('./snacks (2).png');
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }

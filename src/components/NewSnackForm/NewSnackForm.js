@@ -40,7 +40,8 @@ function NewSnackForm() {
   return (
     <div>
       <h1 className="snack-container-new">New</h1>
-      <div className="snack-container-form">
+      <div className="new-snack-body">
+        <div className="snack-container-form">
         <form onSubmit={handleSubmit}>
           <div className="snack-new-input">
             <label htmlFor="name">
@@ -127,6 +128,8 @@ function NewSnackForm() {
           <button type="submit">Submit</button>
         </form>
       </div>
+      </div>
+      
     </div>
   );
 }
