@@ -10,7 +10,6 @@ function Snack() {
 
   let { id } = useParams();
   const navigate = useNavigate();
-  const [currentId, setCurrentId] = useState(id);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -23,7 +22,6 @@ function Snack() {
       let result = await axios.get(`${BASE_URL}/snacks/${id}`);
 
       setSingleSnack(result.data);
-      setCurrentId(result.data.id);
       setIsLoading(false);
     } catch (e) {
       console.log(e);
@@ -48,16 +46,6 @@ function Snack() {
     }
   }
 
-  function handleNextButton(id) {
-    if (id++ === singleSnack.id) {
-      navigate(`/snacks/${id}`);
-      setCurrentId(id);
-    } else {
-      alert("No snacks left!");
-      navigate(`/snacks/1`);
-    }
-  }
-
   function getYearOfRelease() {
     let year = singleSnack.released_date.slice(0, 4);
     return year;
@@ -69,13 +57,6 @@ function Snack() {
         <h2 className="snackH2">Snack</h2>
         {singleSnack && (
           <div className="snack">
-            <div className="snackButtons">
-              <button onClick={() => navigate(`/snacks/${id - 1}`)}>
-                Previous
-              </button>
-              <button onClick={() => navigate("/snacks")}>All Snacks</button>
-              <button onClick={() => handleNextButton(id)}>Next</button>
-            </div>
             <div className="snackDiv">
               <div className="snackImage">
                 <img
@@ -97,7 +78,10 @@ function Snack() {
                 <br />
               </div>
             </div>
-            <div className="snackButtonsLast">
+            <div className="snackButtons">
+              <button onClick={() => navigate("/snacks")}>
+                Back To All Snacks
+              </button>
               <Link to={`/snacks/${id}/edit`}>
                 <button>Edit</button>
               </Link>
