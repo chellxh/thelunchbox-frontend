@@ -3,9 +3,9 @@ import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "./Snack.css";
 import Overlay from "../common/Overlay/Overlay";
+import API from "../common/Api/Api";
 
 function Snack() {
-  const BASE_URL = process.env.REACT_APP_API_URL;
   const [singleSnack, setSingleSnack] = useState(null);
 
   let { id } = useParams();
@@ -19,7 +19,7 @@ function Snack() {
   async function fetchSnackById() {
     try {
       setIsLoading(true);
-      let result = await axios.get(`${BASE_URL}/snacks/${id}`);
+      let result = await axios.get(`${API}/${id}`);
 
       setSingleSnack(result.data);
       setIsLoading(false);
@@ -36,7 +36,7 @@ function Snack() {
 
     if (confirmation) {
       try {
-        let result = await axios.delete(`${BASE_URL}/snacks/${id}`);
+        let result = await axios.delete(`${API}/${id}`);
         const { name } = result.data;
         alert(`${name} Has Been Deleted!`);
         navigate("/snacks");

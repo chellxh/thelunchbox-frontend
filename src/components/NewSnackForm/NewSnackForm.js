@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewSnackForm.css";
+import API from '../common/Api/Api'
 
 function NewSnackForm() {
   const [snack, setSnack] = useState({
@@ -13,7 +14,6 @@ function NewSnackForm() {
     is_favorite: false,
   });
   const navigate = useNavigate();
-  let api = process.env.REACT_APP_API_URL;
 
   function handleCheckBoxChange(event) {
     setSnack({ ...snack, [event.target.id]: event.target.checked });
@@ -28,7 +28,7 @@ function NewSnackForm() {
     event.preventDefault();
 
     try {
-      let result = await axios.post(`${api}/snacks`, snack);
+      let result = await axios.post(`${API}`, snack);
 
       alert(`${snack.name} is added!`);
       navigate(`/snacks/${result.data.id}`);
